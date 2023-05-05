@@ -9,9 +9,23 @@
     position: relative;
 }
 .main-content{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
+    display: flex;
+    /* grid-template-columns: repeat(5,1fr); */
     border: 1px solid green;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.add-new-movie{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-theme-color-black);
 }
 
