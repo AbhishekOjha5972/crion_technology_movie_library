@@ -1,0 +1,20 @@
+:root {
+    --primary-font-medium: 14px;
+    --primary-font-small: 12px;
+
+    --primary-font-heading-large: 30px;
+    --primary-font-heading-medium: 20px;
+    --primary-font-heading-small: 16px;
+
+    --primary-theme-color-black: #0f0f0f;
+    --primary-theme-color-red: #ad241b;
+    --primary-text-color-unknown: #3a3a3c;
+    --primary-text-color-white: #e8e8e8;
+
+    --primary-font-weight-high:700;
+    --primary-font-weight-medium:600;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--primary-theme-color-black);
+}

@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container{
+    border: 2px solid blue;
+    position: relative;
+}
+.main-content{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    border: 1px solid green;
+    gap: 20px;
+}
+
