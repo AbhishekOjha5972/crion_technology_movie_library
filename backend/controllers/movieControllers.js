@@ -27,7 +27,6 @@ const getSortedData = async (req, res) => {
     if (order == "desc") {
         lcOrder = -1
     }
-    console.log(req.query)
     try {
         let data = await MovieModel.find({
             genre: { $in: [q] },
@@ -43,13 +42,11 @@ const getSortedData = async (req, res) => {
 const getCommonSortedData = async (req, res) => {
     let lcOrder = 1
     const { q, order } = req.query;
-    let field = q;
     if (order == "desc") {
         lcOrder = -1
     }
-    console.log(req.query)
     try {
-        let data = await MovieModel.find().sort({ field: lcOrder });
+        let data = await MovieModel.find().sort({ [req.query.q]: lcOrder });
         res.status(200).json({ message: "success", data: data })
     } catch (err) {
         res.status(500).json({ message: "server error", error: err.message })

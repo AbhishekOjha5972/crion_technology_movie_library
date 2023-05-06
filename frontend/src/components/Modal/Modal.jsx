@@ -1,11 +1,22 @@
 import React from 'react';
 import './Modal.css';
 import { RxCrossCircled } from "react-icons/rx"
+import { AiFillDelete } from "react-icons/ai"
+import { useDispatch } from 'react-redux';
+import { deleteMoviesAction } from '../../redux/movies.actions';
+import { AiFillEdit } from "react-icons/ai"
+import { Link } from 'react-router-dom';
 
 function Modal(props) {
+    const dispatch = useDispatch()
     const { isOpen, onClose, element } = props;
     if (!isOpen) {
         return null;
+    }
+
+
+    const handleDelete = () => {
+        dispatch(deleteMoviesAction(element._id))
     }
     return (
         <div className="modal" onClick={onClose}>
@@ -33,6 +44,10 @@ function Modal(props) {
                         </div>
                     </div>
                 </div>
+                <AiFillDelete className="delete-movie" onClick={handleDelete} />
+                <Link to={`/edit/${element._id}`}>
+                    <AiFillEdit className='edit-movie' />
+                </Link>
             </div>
         </div>
     );

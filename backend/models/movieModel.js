@@ -15,7 +15,7 @@ const movieSchema = mongoose.Schema(
         }],
         ratings: {
             IMDb: { type: Number, required: true },
-            'Rotten Tomatoes': { type: Number, required: true }
+            'Rotten Tomatoes': { type: Number}
         }
     }
     ,

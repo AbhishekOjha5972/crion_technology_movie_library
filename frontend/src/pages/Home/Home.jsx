@@ -14,7 +14,7 @@ const Home = () => {
     useEffect(() => {
         dispatch(getMoviesAction())
     }, [])
-
+    
 
 
     const openModal = () => {
@@ -32,7 +32,7 @@ const Home = () => {
             <Navbar />
             <section className='main-content'>
                 {
-                    loading ? <h1>Loading...</h1> : movies.map((ele, i) => {
+                    loading ? <h1 style={{color:"white"}}>Loading...</h1> : movies.map((ele, i) => {
                         return <MovieCard key={i} element={ele}/>
                     })
                 }

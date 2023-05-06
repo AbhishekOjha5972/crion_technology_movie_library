@@ -8,6 +8,7 @@ nav {
 .nav-logo-search {
     display: flex;
     gap: 20px;
+    transition: all 2s ease-in-out;
 }
 
 .nav-logo-search>span {
@@ -31,7 +32,7 @@ nav {
 }
 
 .nav-search>input {
-    width: 250px;
+    /* width: 250px; */
     padding-left: 15px;
     height: 30px;
     background-color: var(--primary-theme-color-black);
@@ -63,8 +64,17 @@ nav {
     justify-content: center;
     gap: 10px;
 }
+.van-sort-fields > div:nth-child(1){
+    display: flex;
+}
 .van-sort-fields > div:nth-child(1) > label{
     margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.van-sort-fields > div:nth-child(1) > label > input{
+    accent-color: var(--primary-theme-color-red);
 }
 .van-sort-fields > div:nth-child(2) > select{
     background-color: var(--primary-theme-color-black);
@@ -78,4 +88,25 @@ nav {
     padding: 2px;
     width: 50px;
     border-radius: 5px;
+}
+
+
+@media only screen and (max-width:900px){
+    nav{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-logo-search{
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+}
+@media only screen and (max-width:425px){
+    .nav-sort{
+        align-items: center;
+    }
+    .van-sort-fields{
+        flex-direction: column;
+    }
 }
