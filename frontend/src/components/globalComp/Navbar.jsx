@@ -62,7 +62,7 @@ const Navbar = () => {
     return (
         <nav>
             <section className='nav-logo-search'>
-                <span>Crion <bdi>Teck.</bdi></span>
+                <span>Crion <bdi>Tech.</bdi></span>
                 <div className='nav-search'>
                     <BsSearch />
                     <input placeholder='Search everything'  
